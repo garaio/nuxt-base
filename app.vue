@@ -1,41 +1,31 @@
-<script>
-import { defineNuxtComponent } from '#app';
+<script setup>
+const todoList = ref([]);
 
-export default defineNuxtComponent({
-  created() {
-    this.fetchTodoList();
-  },
-  data: () => ({
-    todoList : []
-  }),
-  computed: {
-    numberOfTodos() {
-      return this.todoList.length;
-    },
-    completedTodos() {
-      return this.todoList.filter(todo => todo.completed).length;
-    }
-  },
-  methods: {
-    fetchTodoList() {
-      fetch("https://jsonplaceholder.typicode.com/todos/")
-        .then(response => response.json())
-        .then(json => {
-          this.todoList = json;
-        });
-    }
-  }
+const numberOfTodos = computed(() => {
+  return todoList.value.length;
 })
+
+const completedTodos = computed(() => {
+  return todoList.value.filter(todo => todo.completed).length;
+})
+
+function fetchTodoList() {
+  fetch("https://jsonplaceholder.typicode.com/todos/")
+    .then(response => response.json())
+    .then(json => {
+      todoList.value = json;
+    });
+}
 </script>
 
 <template>
   <div>
     <h1>Hello Nuxt App</h1>
-    <img src="/background.jpg" width="300"/> 
+    <img src="/background.jpg" width="300" />
     <h2>Number of todos: {{ completedTodos }} / {{ numberOfTodos }}</h2>
     <button @click="fetchTodoList()">Fetch todo list</button>
     <!-- <pre>{{ todoList }}</pre> -->
-    <ul>
+    <ul class="todo-list">
       <li v-for="todo in todoList" :key="todo.id">
         <input type="checkbox" v-model="todo.completed" />
         {{ todo.title }} - {{ todo.completed }}
@@ -43,3 +33,10 @@ export default defineNuxtComponent({
     </ul>
   </div>
 </template>
+
+<style scoped>
+.todo-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+</style>
