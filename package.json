@@ -10,6 +10,8 @@
     "nodeVersionSwitcher": "nvs auto && nvs link && node --version"
   },
   "devDependencies": {
-    "nuxt": "3.0.0"
+    "nuxt": "3.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0"
   }
 }
