@@ -46,3 +46,11 @@ function fetchTodoList() {
   padding: 50px;
 }
 </style>
+
+<style lang="scss" scoped>
+@import "./assets/styles/main.scss";
+
+.todo-list {
+  background-color: #{$backgroundColor};
+}
+</style>
