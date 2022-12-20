@@ -19,7 +19,7 @@ function fetchTodoList() {
 </script>
 
 <template>
-  <div>
+  <div :class="$style.page">
     <h1>Hello Nuxt App</h1>
     <img src="/background.jpg" width="300" />
     <h2>Number of todos: {{ completedTodos }} / {{ numberOfTodos }}</h2>
@@ -38,5 +38,11 @@ function fetchTodoList() {
 .todo-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+</style>
+
+<style module>
+.page {
+  padding: 50px;
 }
 </style>
