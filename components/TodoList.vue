@@ -1,0 +1,43 @@
+<script setup>
+const todoList = ref([]);
+
+const numberOfTodos = computed(() => {
+    return todoList.value.length;
+})
+
+const completedTodos = computed(() => {
+    return todoList.value.filter(todo => todo.completed).length;
+})
+
+function fetchTodoList() {
+    fetch("https://jsonplaceholder.typicode.com/todos/")
+        .then(response => response.json())
+        .then(json => {
+            todoList.value = json;
+        });
+}
+</script>
+
+<template>
+    <div>
+        <h2>Number of todos: {{ completedTodos }} / {{ numberOfTodos }}</h2>
+        <button @click="fetchTodoList()">Fetch todo list</button>
+        <!-- <pre>{{ todoList }}</pre> -->
+        <ul class="todo-list">
+            <li v-for="todo in todoList" :key="todo.id">
+                <input type="checkbox" v-model="todo.completed" />
+                {{ todo.title }} - {{ todo.completed }}
+            </li>
+        </ul>
+    </div>
+</template>
+
+<style lang="scss" scoped>
+@import "./assets/styles/main.scss";
+
+.todo-list {
+    background-color: #{$backgroundColor};
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+</style>

@@ -1,56 +1,27 @@
-<script setup>
-const todoList = ref([]);
-
-const numberOfTodos = computed(() => {
-  return todoList.value.length;
-})
-
-const completedTodos = computed(() => {
-  return todoList.value.filter(todo => todo.completed).length;
-})
-
-function fetchTodoList() {
-  fetch("https://jsonplaceholder.typicode.com/todos/")
-    .then(response => response.json())
-    .then(json => {
-      todoList.value = json;
-    });
-}
-</script>
-
 <template>
-  <div :class="$style.page">
-    <h1>Hello Nuxt App</h1>
-    <img src="/background.jpg" width="300" />
-    <h2>Number of todos: {{ completedTodos }} / {{ numberOfTodos }}</h2>
-    <button @click="fetchTodoList()">Fetch todo list</button>
-    <!-- <pre>{{ todoList }}</pre> -->
-    <ul class="todo-list">
-      <li v-for="todo in todoList" :key="todo.id">
-        <input type="checkbox" v-model="todo.completed" />
-        {{ todo.title }} - {{ todo.completed }}
-      </li>
-    </ul>
+  <div :class="$style.page" class="d-grid">
+    <div>
+      <h1>Hello Nuxt App</h1>
+      <Image src="/background.jpg" width="700px">
+        <h3>Image title</h3>
+      </Image>
+    </div>
+    <div>
+      <TodoList />
+    </div>
   </div>
 </template>
-
-<style scoped>
-.todo-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-</style>
 
 <style module>
 .page {
   padding: 50px;
+  background-color: bisque;
 }
 </style>
 
-<style lang="scss" scoped>
-@import "./assets/styles/main.scss";
-
-.todo-list {
-  background-color: #{$backgroundColor};
+<style>
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 </style>
