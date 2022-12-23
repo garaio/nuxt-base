@@ -1,7 +1,24 @@
-<script setup>
-const todoList = ref([]);
+<script setup lang="ts">
+import { AsyncData } from '#app';
+import { Ref } from 'vue';
 
+type Todos = {
+    userId: number,
+    id: number,
+    title: string,
+    completed: boolean,
+}
+const todoList: Ref<Todos[]> = ref([]);
+
+// Runtime declaration:
 const emit = defineEmits(["fetched"])
+
+// Type based declaration
+// const emit = defineEmits<{
+//     (event: "fetched"): void;
+// }>()
+
+fetchTodoList()
 
 const numberOfTodos = computed(() => {
     return todoList.value.length;
@@ -16,15 +33,14 @@ function clear() {
     todoList.value = [];
 }
 
-// onMounted, beforeCreated etc. do exist, but the earliest is just calling it within the setup function here
-fetchTodoList();
-
 async function fetchTodoList() {
     // Client/Server fetch working
-    const { data: todos } = await useFetch("https://jsonplaceholder.typicode.com/todos/");
+    const response = await useFetch("https://jsonplaceholder.typicode.com/todos/") as AsyncData<Todos[], Error>;
     // The response is already JSON now
-    todoList.value = todos.value;
-    emit("fetched");
+    if (response.data.value !== null) {
+        todoList.value = response.data.value;
+        emit("fetched");
+    }
 }
 </script>
 
