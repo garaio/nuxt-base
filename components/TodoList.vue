@@ -19,16 +19,12 @@ function clear() {
 // onMounted, beforeCreated etc. do exist, but the earliest is just calling it within the setup function here
 fetchTodoList();
 
-function fetchTodoList() {
-    useAsyncData("todos", () => {
-        // Client/Server fetch working
-        $fetch("https://jsonplaceholder.typicode.com/todos/")
-            // The response is already JSON now
-            .then(json => {
-                todoList.value = json;
-                emit("fetched");
-            })
-    });
+async function fetchTodoList() {
+    // Client/Server fetch working
+    const { data: todos } = await useFetch("https://jsonplaceholder.typicode.com/todos/");
+    // The response is already JSON now
+    todoList.value = todos.value;
+    emit("fetched");
 }
 </script>
 
