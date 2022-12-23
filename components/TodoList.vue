@@ -1,6 +1,8 @@
 <script setup>
 const todoList = ref([]);
 
+const emit = defineEmits(["fetched"])
+
 const numberOfTodos = computed(() => {
     return todoList.value.length;
 })
@@ -14,6 +16,7 @@ function fetchTodoList() {
         .then(response => response.json())
         .then(json => {
             todoList.value = json;
+            emit("fetched");
         });
 }
 </script>

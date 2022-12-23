@@ -1,3 +1,12 @@
+<script setup lang="ts">
+
+const hasFetched = ref(false);
+
+function fetched() {
+  hasFetched.value = true;
+}
+</script>
+
 <template>
   <div :class="$style.page" class="d-grid">
     <div>
@@ -7,7 +16,8 @@
       </Image>
     </div>
     <div>
-      <TodoList />
+      <pre>hasFetched ? {{ hasFetched }}</pre>
+      <TodoList @fetched="fetched" />
     </div>
   </div>
 </template>
