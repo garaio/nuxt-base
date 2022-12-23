@@ -5,6 +5,17 @@ useHead({
 </script>
 
 <template>
+    <Html lang="de">
+
+    <Head>
+        <Title>Nuxt Learning area !!!</Title>
+        <Link rel="preconnect" href="https://fonts.googleapis.com" />
+        <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <Link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet" />
+    </Head>
+
+    </Html>
+
     <NuxtLayout>
         <div class="error">
             You landed on the default empty router page
@@ -37,5 +48,8 @@ div {
 
 .error {
     background-color: red;
+    font-family: 'Rubik Gemstones', cursive;
+    font-size: 3rem;
+    color: white;
 }
 </style>
