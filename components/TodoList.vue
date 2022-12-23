@@ -11,6 +11,14 @@ const completedTodos = computed(() => {
     return todoList.value.filter(todo => todo.completed).length;
 })
 
+
+function clear() {
+    todoList.value = [];
+}
+
+// onMounted, beforeCreated etc. do exist, but the earliest is just calling it within the setup function here
+fetchTodoList();
+
 function fetchTodoList() {
     fetch("https://jsonplaceholder.typicode.com/todos/")
         .then(response => response.json())
@@ -24,6 +32,7 @@ function fetchTodoList() {
 <template>
     <div>
         <h2>Number of todos: {{ completedTodos }} / {{ numberOfTodos }}</h2>
+        <button @click="clear()">Clear list</button>
         <button @click="fetchTodoList()">Fetch todo list</button>
         <!-- <pre>{{ todoList }}</pre> -->
         <ul class="todo-list">
