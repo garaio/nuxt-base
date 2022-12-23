@@ -8,15 +8,15 @@
         <ul>
             <li>
                 <NuxtLink to="DemoRouterPage">Demo router page</NuxtLink>
-
             </li>
             <li>
                 <NuxtLink to="SubPage">Sub page handling</NuxtLink>
-
             </li>
             <li>
-                <NuxtLink to="SubPage/A">goto A in th subpage folder</NuxtLink>
-
+                <NuxtLink to="SubPage/A">goto A in the subpage folder</NuxtLink>
+            </li>
+            <li>
+                <NuxtLink to="SubPage/123">goto 123 id item in the subpage folder</NuxtLink>
             </li>
         </ul>
     </div>

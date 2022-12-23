@@ -1,13 +1,11 @@
 <template>
     <div>
-        <h2>A Component</h2>
+        <h3>This is item id: {{ route.params.id }}</h3>
     </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute();
-console.log(route);
-
 </script>
 
 <style scoped>
