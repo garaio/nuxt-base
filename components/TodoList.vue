@@ -20,12 +20,15 @@ function clear() {
 fetchTodoList();
 
 function fetchTodoList() {
-    fetch("https://jsonplaceholder.typicode.com/todos/")
-        .then(response => response.json())
-        .then(json => {
-            todoList.value = json;
-            emit("fetched");
-        });
+    useAsyncData("todos", () => {
+        // Client/Server fetch working
+        $fetch("https://jsonplaceholder.typicode.com/todos/")
+            // The response is already JSON now
+            .then(json => {
+                todoList.value = json;
+                emit("fetched");
+            })
+    });
 }
 </script>
 
