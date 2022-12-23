@@ -1,3 +1,9 @@
+<script setup>
+useHead({
+    title: "NUXT Learning area"
+})
+</script>
+
 <template>
     <NuxtLayout>
         <div class="error">
