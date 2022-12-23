@@ -3,6 +3,7 @@
 
 <template>
   <h1>Normal app component, before router pages</h1>
+  <NuxtLink to="/">Home</NuxtLink>
   <NuxtPage />
 </template>
 

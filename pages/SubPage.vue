@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <NuxtLayout name="padded">
         <h2>SubPage</h2>
         <!-- NuxtPage renders all the child paths from within the same folder name (SubPage) in here -->
         <NuxtPage />
-    </div>
+    </NuxtLayout>
 </template>
 
 <script setup lang="ts">
