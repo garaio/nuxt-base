@@ -1,6 +1,14 @@
 <template>
+  <Html lang="en">
+
+  <Head>
+    <Title>GARAIO NUXT BASE</Title>
+    <!-- Here you can add more meta data on the APP level -->
+  </Head>
+
+  </Html>
   <div class="app">
-    <NuxtWelcome />
+    <NuxtPage />
   </div>
 </template>
 
