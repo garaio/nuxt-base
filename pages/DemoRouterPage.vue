@@ -1,4 +1,6 @@
-<script setup lang="ts">
+<script setup lang="ts">import useTodos from '~~/use/useTodos';
+
+const { completedTodos, numberOfTodos, clear, fetchTodoList } = useTodos();
 
 const hasFetched = ref(false);
 
@@ -14,12 +16,19 @@ function fetched() {
       <Image src="/background.jpg" width="700px">
         <h3>Image title</h3>
       </Image>
+      <div>
+        <h3>Re-use the todos, state is NOT shared:</h3>
+        <h2>Number of todos: {{ completedTodos }} / {{ numberOfTodos }}</h2>
+        <button @click="clear()">Clear list</button>
+        <button @click="fetchTodoList()">Fetch todo list</button>
+      </div>
     </div>
     <div>
       <pre>hasFetched ? {{ hasFetched }}</pre>
       <TodoList @fetched="fetched" />
     </div>
   </div>
+
 </template>
 
 <style module>
