@@ -13,4 +13,10 @@ export default defineNuxtConfig({
       }
     }
   },
+  app: {
+    // We add some page and layout transitions per default
+    // The animations can be found in the "_animation.scss" file
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
+  },
 })

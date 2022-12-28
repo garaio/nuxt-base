@@ -13,6 +13,9 @@
   </div>
 </template>
 
+<style lang="scss">
+@import "@/assets/styles/main.scss";
+</style>
 
 <style lang="scss" scoped>
 .app {
