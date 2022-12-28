@@ -35,3 +35,17 @@ New important / improved changes since Vue 2:
   * clarify if this is usable with Nuxt 3!
   * needs $attrs binding to know where to inherit to
   * needs emits set in options
+
+
+## NUXT 3
+
+Documentation is absolutely great, check out: <https://nuxt.com/docs>
+
+### Default setup
+
+Our goal is to re-use the default settings and setup of Nuxt 3, using best practices as documented. Keeping us aligned with key concepts and directory structure.
+
+However here and there might be a little change, hopefully as an improvement:
+
+* Enabled build-time type checking (+ development): [see documentation](https://nuxt.com/docs/api/configuration/nuxt-config#typecheck)
+
