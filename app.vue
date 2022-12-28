@@ -7,6 +7,7 @@
   </Head>
 
   </Html>
+
   <div class="app">
     <NuxtPage />
   </div>
@@ -14,8 +15,6 @@
 
 
 <style lang="scss" scoped>
-@import "./assets/styles/main.scss";
-
 .app {
   background-color: #{$backgroundColor};
 }
