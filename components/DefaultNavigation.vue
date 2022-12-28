@@ -7,13 +7,10 @@
         <NuxtLink to="/">GARAIO Nuxt base</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/NuxtPage">Nuxt Welcome Page</NuxtLink>
+        <NuxtLink to="/nuxt-page">Nuxt Welcome Page</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/posts/1">Page xy</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink to="/posts/2">Page xy</NuxtLink>
+        <NuxtLink to="/empty-page">Empty page</NuxtLink>
       </li>
     </ul>
   </nav>
@@ -21,7 +18,7 @@
 
 <style scoped lang="scss">
 nav {
-  margin-top: 40px;
+  height: 40px;
 }
 
 .navigation {

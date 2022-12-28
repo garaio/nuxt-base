@@ -2,18 +2,19 @@
 // Layout specific transition
 .layout-enter-active,
 .layout-leave-active {
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.5s ease-in-out;
 }
 
 .layout-enter-from,
 .layout-leave-to {
   opacity: 0;
+  transform: translateY(-100vh);
 }
 
 // Layout specific transition
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 }
 
 .page-enter-from,

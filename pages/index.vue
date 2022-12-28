@@ -1,6 +1,6 @@
 <!-- This is the DEFAULT ROUTER PAGE -->
 <template>
-  <NuxtLayout>
+  <div class="page-index">
     <div class="flex flex-col gap-y-4 items-center justify-center">
       <a href="https://nuxt.com" target="_blank">
         <svg width="61" height="42" viewBox="0 0 61 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,11 +14,13 @@
       </h1>
       <TheCounter />
     </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">
-
+definePageMeta({
+  layout: 'default',
+})
 </script>
 
 <style scoped>
