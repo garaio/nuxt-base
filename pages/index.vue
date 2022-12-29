@@ -1,7 +1,7 @@
 <!-- This is the DEFAULT ROUTER PAGE -->
 <template>
   <div class="page-index">
-    <div class="flex flex-col gap-y-4 items-center justify-center">
+    <div class="page-content">
       <a href="https://nuxt.com" target="_blank">
         <svg width="61" height="42" viewBox="0 0 61 42" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -12,7 +12,10 @@
       <h1 class="text-black dark:text-white text-4xl sm:text-5xl font-semibold text-center">
         Welcome to GARAIO Nuxt base!
       </h1>
-      <TheCounter />
+      <div class="components">
+        <UseStateCounter />
+        <PiniaCounter />
+      </div>
     </div>
   </div>
 </template>
@@ -23,12 +26,21 @@ definePageMeta({
 })
 </script>
 
-<style scoped>
-.flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 100px;
+<style lang="scss" scoped>
+.page-content {
+  text-align: center;
+}
+
+.components {
+  display: grid;
+  grid-template-columns: minmax(auto, 1fr);
+  max-width: 800px;
+  margin-inline: auto;
+  gap: 20px;
+
+  >* {
+    border: 1px solid silver;
+    padding: 20px;
+  }
 }
 </style>

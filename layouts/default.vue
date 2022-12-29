@@ -17,5 +17,7 @@
 </script>
 
 <style scoped lang="scss">
-
+main {
+  padding-top: 50px;
+}
 </style>
