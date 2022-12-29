@@ -1,0 +1,49 @@
+{
+	// Place your nuxt-base workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Vue Nuxt 3 Base Component": {
+		"scope": "vue",
+		"prefix": "VueNuxtBaseComponent",
+		"body": [
+"<template>",
+"  <div class=\"component-${1:name}\">",
+"    {{ ${2:$1} }}",
+"  </div>",
+"</template>",
+"",
+"<script setup lang=\"ts\">",
+"${3:const $1 = ref(\"Hello $1 component\")}",
+"</script>",
+"",
+"<style scoped lang=\"scss\">",
+"${0}",
+"</style>"
+		],
+		"description": "Create a vue nuxt 3 component structure"
+	},
+	"Vue Nuxt 3 Base Page": {
+		"scope": "vue",
+		"prefix": "VueNuxtBasePage",
+		"body": [
+"<template>",
+"  <div class=\"page-${1:name}\">",
+"    {{ ${2:$1} }}",
+"  </div>",
+"</template>",
+"",
+"<script setup lang=\"ts\">",
+"${3:const $1 = ref(\"Hello $1 component\")}",
+"</script>",
+"",
+"<style scoped lang=\"scss\">",
+"${0}",
+"</style>"
+		],
+		"description": "Create a vue nuxt 3 page structure"
+	}
+}
