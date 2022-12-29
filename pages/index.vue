@@ -15,6 +15,8 @@
       <div class="components">
         <UseStateCounter />
         <PiniaCounter />
+        <ExampleEmit @test="emitTest" />
+        <TodoList />
       </div>
     </div>
   </div>
@@ -24,6 +26,10 @@
 definePageMeta({
   layout: 'default',
 })
+
+function emitTest() {
+  alert("got an emit 'test'-event!")
+}
 </script>
 
 <style lang="scss" scoped>
