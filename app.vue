@@ -18,7 +18,7 @@
 </template>
 
 <style lang="scss">
-@import "@/assets/styles/main.scss";
+@import "@/scss/main.scss";
 
 body {
   margin: 0;

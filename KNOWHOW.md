@@ -24,7 +24,6 @@ New important / improved changes since Vue 2:
 * onRenderTracked()
 * onRenderTriggered()
 
-
 ### additional features
 
 * new v-model binding
@@ -35,7 +34,6 @@ New important / improved changes since Vue 2:
   * clarify if this is usable with Nuxt 3!
   * needs $attrs binding to know where to inherit to
   * needs emits set in options
-
 
 ## NUXT 3
 
@@ -48,4 +46,4 @@ Our goal is to re-use the default settings and setup of Nuxt 3, using best pract
 However here and there might be a little change, hopefully as an improvement:
 
 * Enabled build-time type checking (+ development): [see documentation](https://nuxt.com/docs/api/configuration/nuxt-config#typecheck)
-
+* scss files are in the `/scss/` folder and not in `/assets/styles`.
