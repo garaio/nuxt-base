@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { useCounterStore } from "@/stores/CounterStore";
 const useCounter = useCounterStore();
 
 // The following is an optional addition, to access the state and getters directly, not over the useCounter-store.
