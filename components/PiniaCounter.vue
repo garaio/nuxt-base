@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { useCounterStore } from "@/stores/CounterStore";
 const useCounter = useCounterStore();
+
+// The following is an optional addition, to access the state and getters directly, not over the useCounter-store.
+const { counter, doubleCounter } = storeToRefs(useCounter);
 </script>
 
 <template>
@@ -10,8 +13,8 @@ const useCounter = useCounterStore();
     <NuxtLink to="https://pinia.vuejs.org/" target="_blank">https://pinia.vuejs.org/</NuxtLink>
 
     <ExampleBox>
-      <div>Counter: {{ useCounter.counter }}</div>
-      <div>Double counter: {{ useCounter.doubleCounter }}</div>
+      <div>Counter: {{ counter }}</div>
+      <div>Double counter: {{ doubleCounter }}</div>
       <div>
         <button @click="useCounter.incrementCounter()">+</button>
         <button @click="useCounter.decrementCounter()">-</button>
