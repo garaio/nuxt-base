@@ -28,7 +28,7 @@ export default function useTodos() {
         const response = await useFetch("https://jsonplaceholder.typicode.com/todos/") as AsyncData<Todos[], Error>;
         // The response is already JSON now
         if (response.data.value !== null) {
-            todoList.value = response.data.value;
+            todoList.value = response.data.value.slice(0, 6);
         }
     }
 

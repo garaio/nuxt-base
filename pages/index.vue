@@ -13,10 +13,11 @@
         Welcome to GARAIO Nuxt base!
       </h1>
       <div class="components">
-        <UseStateCounter />
-        <PiniaCounter />
+        <ExampleProps />
+        <ExampleUseStateCounter />
+        <ExamplePiniaCounter />
         <ExampleEmit @test="emitTest" />
-        <TodoList />
+        <ExampleTodoList />
       </div>
     </div>
   </div>
