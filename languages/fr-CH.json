@@ -1,7 +1,12 @@
 {
-  "car": "auto",
-  "welcome": "Bienvenue",
-  "apple": "pas de pommes | \nune pomme | \n{compter} pommes",
-  "banana": "pas de bananes | \n{n} banane | \n{n} bananes",
-  "tooMany": "trop"
+  "tooMany": "trop",
+  "component": {
+    "exampleI18n": {
+      "welcome": "Bienvenue",
+      "car": "auto",
+      "apple": "pas de pommes | \nune pomme | \n{compter} pommes",
+      "banana": "pas de bananes | \n{n} banane | \n{n} bananes",
+      "defaultTranslation": "Bienvenue dans cet exemple"
+    }
+  }
 }

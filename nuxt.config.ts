@@ -56,35 +56,31 @@ export default defineNuxtConfig({
           {
             code: 'en',
             iso: 'en-US',
-            file: 'en-US.json'
+            file: 'en-US.json',
+            name: "English"
           },
           {
             code: 'de',
             iso: 'de-CH',
-            file: 'de-CH.json'
+            file: 'de-CH.json',
+            name: "Deutsch"
           },
           {
             code: 'fr',
             iso: 'fr-CH',
-            file: 'fr-CH.json'
+            file: 'fr-CH.json',
+            name: 'Français'
           },
           {
             code: 'it',
             iso: 'it-CH',
-            file: 'it-CH.json'
+            file: 'it-CH.json',
+            name: 'Italiano'
           }
         ],
         vueI18n: {
           fallbackLocale: 'en',
-            availableLocales: ['en', 'de', 'fr', 'it'],
-          // messages: {
-          //   en: {
-          //     welcome: 'Welcome',
-          //     car: 'car | cars',
-          //     apple: 'no apples | one apple | {count} apples',
-          //     banana: 'no bananas | {n} banana | {n} bananas'
-          //   }
-          // }
+            // availableLocales: ['en', 'de', 'fr', 'it'],
         }
       }
     ]

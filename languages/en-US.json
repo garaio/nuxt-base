@@ -1,7 +1,12 @@
 {
   "tooMany": "too many",
-  "car": "car | cars",
-  "welcome": "Welcome",
-  "apple": "no apples | one apple | {count} apples",
-  "banana": "no bananas | {n} banana | {n} bananas"
+  "component": {
+    "exampleI18n": {
+      "defaultTranslation": "Welcome to this example",
+      "welcome": "Welcome",
+      "car": "car | cars",
+      "apple": "no apples | one apple | {count} apples",
+      "banana": "no bananas | {n} banana | {n} bananas"
+    }
+  }
 }

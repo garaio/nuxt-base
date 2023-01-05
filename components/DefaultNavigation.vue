@@ -1,18 +1,32 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { locale, locales, setLocale } = useI18n();
+const localePath = useLocalePath();
+
+const availableLocales = computed(() => {
+  return ((locales.value) as any).filter((i: any) => i.code !== locale.value)
+})
+</script>
 
 <template>
   <nav>
     <ul class="navigation">
       <li>
-        <NuxtLink to="/">GARAIO Nuxt base</NuxtLink>
+        <NuxtLink :to="localePath('/')">GARAIO Nuxt base</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/nuxt-page">Nuxt Welcome Page</NuxtLink>
+        <NuxtLink :to="localePath('nuxt-page')">Nuxt Welcome Page</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/empty-page">Empty page</NuxtLink>
+        <NuxtLink :to="localePath('empty-page')">Empty page</NuxtLink>
+      </li>
+      <li class="spacer"></li>
+      <li v-for="locale in availableLocales" :key="locale.code">
+        <a href="#" @click.prevent.stop="setLocale(locale.code)">
+          {{ locale.name }}
+        </a>
       </li>
     </ul>
+
   </nav>
 </template>
 
@@ -47,5 +61,9 @@ a {
   &:hover {
     color: white;
   }
+}
+
+.spacer {
+  flex: 1;
 }
 </style>

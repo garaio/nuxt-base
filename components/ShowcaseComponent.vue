@@ -7,6 +7,7 @@
       <img v-else-if="logo === 'nuxt'" src="@/assets/img/full-logo-green-dark.svg" height="50" />
       <img v-else-if="logo === 'pinia'" src="@/assets/img/pinia-logo.svg" height="100" />
       <img v-else-if="logo === 'vueUse'" src="@/assets/img/composable.svg" height="100" />
+      <img v-else-if="logo === 'nuxtI18n'" src="@/assets/img/nuxt-i18n-logo.svg" height="100" />
     </slot>
     <slot name="title">
       <h1> {{ title }}</h1>
@@ -47,7 +48,7 @@ defineProps({
     default: "",
   },
   logo: {
-    type: String as PropType<"vue" | "nuxt" | "pinia" | "vueUse">,
+    type: String as PropType<"vue" | "nuxt" | "pinia" | "vueUse" | "nuxtI18n">,
     default: "vue",
   }
 })
