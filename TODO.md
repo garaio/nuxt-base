@@ -18,6 +18,7 @@
 * jest ? or vitest ?
 * vuetify
 * pwa
+* nuxt extends : <https://www.youtube.com/watch?v=HvTui3P0w-o>
 
 ## Other external topics / migration / improvements
 
