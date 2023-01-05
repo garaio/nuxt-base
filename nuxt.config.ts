@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      environment: "",
+      backendUrl: "https://localhost:44313",
+      appInsightsInstrumentationKey: "",
+    }
+  },
   typescript: {
     strict: true,
     typeCheck: true,

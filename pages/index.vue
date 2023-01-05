@@ -18,6 +18,7 @@
         <ExamplePiniaCounter />
         <ExampleEmit @test="emitTest" />
         <ExampleTodoList />
+        <ExampleRuntimeConfig />
       </div>
     </div>
   </div>

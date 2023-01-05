@@ -1,16 +1,18 @@
-# TODO
+# TODOs
 
 ## Prio cases
 
-* Runtime config
-  * maybe we can make a plugin for getting the settings.json file?
-  * <https://nuxt.com/docs/guide/going-further/runtime-config>
-
-* props example
 * language ? i18n nuxt ? new process?
 * recommendations extensions
 * prettier ?
 * eslint ?
+
+## Backend changes needed
+
+* Runtime config (BACKEND) (frontend done)
+  * Instead of creating a json file, it would be perfect to have a env file
+  * Nuxt will automatically replace config with env content during runtime
+  * <https://nuxt.com/docs/guide/going-further/runtime-config>
 
 ## Later
 
