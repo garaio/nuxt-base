@@ -1,0 +1,7 @@
+{
+  "car": "macchina",
+  "welcome": "Ben arrivato",
+  "apple": "niente mele | \nuna mela | \n{conta} mele",
+  "banana": "niente banane | \n{n} banana | \n{n} banane",
+  "tooMany": "troppi"
+}

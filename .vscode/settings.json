@@ -1,4 +1,9 @@
 {
     "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "i18n-ally.localesPaths": [
+        "languages"
+    ],
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.sourceLanguage": "en-US",
 }

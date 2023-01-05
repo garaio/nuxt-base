@@ -43,5 +43,50 @@ export default defineNuxtConfig({
         ],
       },
     ],
+    [
+      '@nuxtjs/i18n',
+      {
+        legacy: false,
+        globalInjection: true,
+        strategy: 'prefix_and_default',
+        defaultLocale: 'de',
+        lazy: true,
+        langDir: "languages",
+        locales: [
+          {
+            code: 'en',
+            iso: 'en-US',
+            file: 'en-US.json'
+          },
+          {
+            code: 'de',
+            iso: 'de-CH',
+            file: 'de-CH.json'
+          },
+          {
+            code: 'fr',
+            iso: 'fr-CH',
+            file: 'fr-CH.json'
+          },
+          {
+            code: 'it',
+            iso: 'it-CH',
+            file: 'it-CH.json'
+          }
+        ],
+        vueI18n: {
+          fallbackLocale: 'en',
+            availableLocales: ['en', 'de', 'fr', 'it'],
+          // messages: {
+          //   en: {
+          //     welcome: 'Welcome',
+          //     car: 'car | cars',
+          //     apple: 'no apples | one apple | {count} apples',
+          //     banana: 'no bananas | {n} banana | {n} bananas'
+          //   }
+          // }
+        }
+      }
+    ]
   ],
 })

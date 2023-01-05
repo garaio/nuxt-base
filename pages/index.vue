@@ -13,6 +13,7 @@
         Welcome to GARAIO Nuxt base!
       </h1>
       <div class="components">
+        <ExampleI18n />
         <ExampleProps />
         <ExampleUseStateCounter />
         <ExamplePiniaCounter />

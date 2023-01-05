@@ -1,0 +1,7 @@
+{
+  "tooMany": "too many",
+  "car": "car | cars",
+  "welcome": "Welcome",
+  "apple": "no apples | one apple | {count} apples",
+  "banana": "no bananas | {n} banana | {n} bananas"
+}

@@ -2,8 +2,10 @@
 
 ## Prio cases
 
-* language ? i18n nuxt ? new process?
-* recommendations extensions
+* i18n
+  * json -> DONE
+  * resx ?
+  * processing
 * prettier ?
 * eslint ?
 
@@ -26,3 +28,13 @@
 
 * mixins -> how to solve message mixin within nuxt -> plugin?
 * resx2ts -> translations directly into the file instead of requiring a request
+
+## Deveoper Experience / VSCode
+
+We might want to invest some time to develop:
+
+* Commented idea on github issue
+* Create a Extension that checks for extension which should be disabled according to "unwantedRecommendations".
+  * similar to <https://github.com/muzaisimao/vscode-disable-extensions>
+* Create devcontainer with docker to have a base setup running.
+  * <https://code.visualstudio.com/docs/devcontainers/containers>

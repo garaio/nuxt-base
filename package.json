@@ -10,6 +10,7 @@
     "nodeVersionSwitcher": "nvs auto && nvs link && node --version"
   },
   "devDependencies": {
+    "@nuxtjs/i18n": "^8.0.0-beta.7",
     "@pinia/nuxt": "^0.4.6",
     "nuxt": "3.0.0",
     "pinia": "^2.0.28",
