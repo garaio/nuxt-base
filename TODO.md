@@ -2,12 +2,13 @@
 
 ## Prio cases
 
-* i18n
+* i18n - (+ vscode extension i18nAlly)
   * json -> DONE
   * resx ?
   * processing
 * prettier ?
 * eslint ?
+* class components?
 
 ## Backend changes needed
 
@@ -18,9 +19,9 @@
 
 ## Later
 
+* vuetify
 * vue use example (composable)
 * jest ? or vitest ?
-* vuetify
 * pwa
 * translation / i18n
   * Wait for transitions
