@@ -1,9 +1,15 @@
 {
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-    "i18n-ally.localesPaths": [
-        "languages"
-    ],
-    "i18n-ally.keystyle": "nested",
-    "i18n-ally.sourceLanguage": "en-US",
+  "editor.tabSize": 2,
+  "i18n-ally.localesPaths": [
+    "languages"
+  ],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "en-US",
+  "prettier.enable": false, // lets try without prettier (makes it more complex and unstable)
+  "editor.formatOnSave": false, // otherwise volar conflicts with eslint I guess
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false,
+    "source.fixAll.eslint": true, // this allows ESLint to auto fix on save
+    "source.organizeImports": false
+  }
 }

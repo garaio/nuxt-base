@@ -7,9 +7,12 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "nodeVersionSwitcher": "nvs auto && nvs link && node --version"
+    "nodeVersionSwitcher": "nvs auto && nvs link && node --version",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.34.1",
     "@nuxtjs/i18n": "^8.0.0-beta.7",
     "@pinia/nuxt": "^0.4.6",
     "nuxt": "3.0.0",
