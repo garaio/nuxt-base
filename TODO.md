@@ -2,13 +2,10 @@
 
 ## Prio cases
 
-* i18n - (+ vscode extension i18nAlly)
-  * json -> DONE
-  * resx ?
-  * processing
-* prettier ?
-* eslint ?
+* Documentation: prettier + eslint setup
+* axios ?
 * class components?
+* Vuetify
 
 ## Backend changes needed
 
@@ -19,27 +16,35 @@
 
 ## Later
 
-* vuetify
-* vue use example (composable)
 * jest ? or vitest ?
 * pwa
+* nuxt extends : <https://www.youtube.com/watch?v=HvTui3P0w-o>
 * translation / i18n
   * Wait for transitions
   * lazy load translations
   * translations per SFC (Component)
-* nuxt extends : <https://www.youtube.com/watch?v=HvTui3P0w-o>
+  * resx ? (maybe a migration tool when migrating over?)
+  * translation process (something else than copy pasting json files?)
+
+## Examples
+
+Create further examples which might be useful
+
+* vue use example ? (composable)
+
+## Migration process
+
+If we really want to migrate a project, collect how we are going to do things:
+
+* mixins?
 
 ## Other external topics / migration / improvements
 
 * mixins -> how to solve message mixin within nuxt -> plugin?
-* resx2ts -> translations directly into the file instead of requiring a request
 
-## Deveoper Experience / VSCode
+## Developer Experience / VSCode
 
-We might want to invest some time to develop:
+Possible future improvements
 
-* Commented idea on github issue
-* Create a Extension that checks for extension which should be disabled according to "unwantedRecommendations".
-  * similar to <https://github.com/muzaisimao/vscode-disable-extensions>
-* Create devcontainer with docker to have a base setup running.
+* Create dev-container with docker to have a base setup running ?
   * <https://code.visualstudio.com/docs/devcontainers/containers>
