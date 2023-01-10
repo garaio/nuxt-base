@@ -11,7 +11,7 @@ export const useCounterStore = defineStore("CounterStore", {
     doubleCounter(): number {
       // autocompletion and typings for the whole store ✨
       return this.getCounter * 2;
-    } 
+    },
   },
   actions: {
     incrementCounter() {
@@ -20,5 +20,5 @@ export const useCounterStore = defineStore("CounterStore", {
     decrementCounter() {
       this.counter--;
     },
-  }
-})
+  },
+});

@@ -1,24 +1,30 @@
 <script lang="ts" setup>
-const counter = useState('counter', () => Math.round(Math.random() * 1000))
+const counter = useState("counter", () => Math.round(Math.random() * 1000));
 </script>
 
 <template>
   <div class="component-example-use-state-counter">
-    <ShowcaseComponent componentFile="ExampleUseStateCounter.vue" title="UseState Counter component"
-      link="https://nuxt.com/docs/getting-started/state-management" logo="nuxt">
+    <ShowcaseComponent
+      component-file="ExampleUseStateCounter.vue"
+      title="UseState Counter component"
+      link="https://nuxt.com/docs/getting-started/state-management"
+      logo="nuxt"
+    >
       useState is the Nuxt implementation of ref(), including support for SSR
-
       <template #example>
-        <ShowcaseExample class="text-center">
+        <ShowcaseExample class="text-center" test="test">
           <div>Counter: {{ counter }}</div>
           <div>Double counter: {{ counter * 2 }}</div>
           <div>
-            <button @click="counter++">+</button>
-            <button @click="counter--">-</button>
+            <button @click="counter++">
+              +
+            </button>
+            <button @click="counter--">
+              -
+            </button>
           </div>
         </ShowcaseExample>
       </template>
     </ShowcaseComponent>
   </div>
-
 </template>

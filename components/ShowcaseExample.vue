@@ -1,12 +1,4 @@
-<template>
-  <div class="component-showcase-example text-left">
-    <span class="title">Example:</span>
-    <slot />
-  </div>
-</template>
-
 <script setup lang="ts">
-
 defineProps({
   backgroundColor: {
     type: String,
@@ -21,8 +13,15 @@ defineProps({
     default: "#fff",
   },
 
-})
+});
 </script>
+
+<template>
+  <div class="component-showcase-example text-left">
+    <span class="title">Example:</span>
+    <slot />
+  </div>
+</template>
 
 <style scoped lang="scss">
 .component-showcase-example {

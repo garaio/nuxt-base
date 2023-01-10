@@ -5,84 +5,84 @@ export default defineNuxtConfig({
       environment: "",
       backendUrl: "https://localhost:44313",
       appInsightsInstrumentationKey: "",
-    }
+    },
   },
   typescript: {
     strict: true,
     typeCheck: true,
-    shim: false
+    shim: false,
   },
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/scss/_importIntoComponents.scss" as *;'
-        }
-      }
-    }
+          additionalData: "@use \"@/scss/_importIntoComponents.scss\" as *;",
+        },
+      },
+    },
   },
   app: {
     // We add some page and layout transitions per default
     // The animations can be found in the "_animation.scss" file
-    pageTransition: { name: 'page', mode: 'out-in' },
-    layoutTransition: { name: 'layout', mode: 'out-in' }
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
   },
   imports: {
-    dirs: ['stores']
+    dirs: ["stores"],
   },
   modules: [
     [
-      '@pinia/nuxt',
+      "@pinia/nuxt",
       {
         autoImports: [
-          'storeToRefs',
+          "storeToRefs",
           // automatically imports `defineStore`
-          'defineStore', // import { defineStore } from 'pinia'
+          "defineStore", // import { defineStore } from 'pinia'
           // automatically imports `defineStore` as `definePiniaStore`
-          ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
+          ["defineStore", "definePiniaStore"], // import { defineStore as definePiniaStore } from 'pinia'
         ],
       },
     ],
     [
-      '@nuxtjs/i18n',
+      "@nuxtjs/i18n",
       {
         legacy: false,
         globalInjection: true,
-        strategy: 'prefix_and_default',
-        defaultLocale: 'de',
+        strategy: "prefix_and_default",
+        defaultLocale: "de",
         lazy: true,
         langDir: "languages",
         locales: [
           {
-            code: 'en',
-            iso: 'en-US',
-            file: 'en-US.json',
-            name: "English"
+            code: "en",
+            iso: "en-US",
+            file: "en-US.json",
+            name: "English",
           },
           {
-            code: 'de',
-            iso: 'de-CH',
-            file: 'de-CH.json',
-            name: "Deutsch"
+            code: "de",
+            iso: "de-CH",
+            file: "de-CH.json",
+            name: "Deutsch",
           },
           {
-            code: 'fr',
-            iso: 'fr-CH',
-            file: 'fr-CH.json',
-            name: 'Français'
+            code: "fr",
+            iso: "fr-CH",
+            file: "fr-CH.json",
+            name: "Français",
           },
           {
-            code: 'it',
-            iso: 'it-CH',
-            file: 'it-CH.json',
-            name: 'Italiano'
-          }
+            code: "it",
+            iso: "it-CH",
+            file: "it-CH.json",
+            name: "Italiano",
+          },
         ],
         vueI18n: {
-          fallbackLocale: 'en',
-            // availableLocales: ['en', 'de', 'fr', 'it'],
-        }
-      }
-    ]
+          fallbackLocale: "en",
+          // availableLocales: ['en', 'de', 'fr', 'it'],
+        },
+      },
+    ],
   ],
-})
+});

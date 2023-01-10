@@ -5,25 +5,31 @@ fetchTodoList(); // initially fetch todo list
 
 <template>
   <div class="component-example-todo-list">
-    <ShowcaseComponent componentFile="ExampleTodoList.vue" title="Todo List example using composable code (useTodos)"
-      link="https://vuejs.org/guide/reusability/composables.html" logo="vue">
-
+    <ShowcaseComponent
+      component-file="ExampleTodoList.vue"
+      title="Todo List example using composable code (useTodos)"
+      link="https://vuejs.org/guide/reusability/composables.html"
+      logo="vue"
+    >
       <template #example>
         <ShowcaseExample>
           <h2>Number of todo's: {{ completedTodos }} / {{ numberOfTodos }}</h2>
-          <button @click="clear()">Clear list</button>
-          <button @click="fetchTodoList()">Fetch todo list</button>
+          <button @click="clear()">
+            Clear list
+          </button>
+          <button @click="fetchTodoList()">
+            Fetch todo list
+          </button>
 
           <ul class="todo-list">
             <li v-for="todo in todoList" :key="todo.id">
-              <input type="checkbox" v-model="todo.completed" />
+              <input v-model="todo.completed" type="checkbox">
               {{ todo.title }} - {{ todo.completed }}
             </li>
           </ul>
         </ShowcaseExample>
       </template>
     </ShowcaseComponent>
-
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // Runtime declaration:
-const emit = defineEmits(["test"])
+const emit = defineEmits(["test"]);
 
 // Type based declaration
 // const emit = defineEmits<{
@@ -15,9 +15,12 @@ function emitExample() {
 
 <template>
   <div class="component-example-emit">
-    <ShowcaseComponent componentFile="ExampleEmit.vue" title="Emit example"
-      link="https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits" logo="vue">
-
+    <ShowcaseComponent
+      component-file="ExampleEmit.vue"
+      title="Emit example"
+      link="https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits"
+      logo="vue"
+    >
       <ShowcaseExample>
         <pre>
           const emit = defineEmits(["test"]);
@@ -26,7 +29,9 @@ function emitExample() {
       </ShowcaseExample>
       <template #example>
         <ShowcaseExample class="text-center">
-          <button @click="emitExample()">Emit</button>
+          <button @click="emitExample()">
+            Emit
+          </button>
         </ShowcaseExample>
       </template>
     </ShowcaseComponent>

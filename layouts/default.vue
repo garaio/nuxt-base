@@ -1,3 +1,7 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
   <div class="default-layout">
     <header>
@@ -7,14 +11,12 @@
       <slot />
     </main>
     <footer>
-      <NuxtLink to="https://www.garaio.com" target="_blank">@GARAIO LABS</NuxtLink>
+      <NuxtLink to="https://www.garaio.com" target="_blank">
+        @GARAIO LABS
+      </NuxtLink>
     </footer>
   </div>
 </template>
-
-<script setup lang="ts">
-
-</script>
 
 <style scoped lang="scss">
 main {

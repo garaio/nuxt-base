@@ -1,8 +1,27 @@
+<script setup lang="ts">
+defineProps({
+  backgroundColor: {
+    type: String,
+    default: "#2c3e50",
+  },
+  borderColor: {
+    type: String,
+    default: "#42b983",
+  },
+  textColor: {
+    type: String,
+    default: "#fff",
+  },
+});
+</script>
+
 <template>
   <div class="example-props">
-    <ShowcaseComponent componentFile="ExampleProps.vue" title="Props"
-      link="https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits">
-
+    <ShowcaseComponent
+      component-file="ExampleProps.vue"
+      title="Props"
+      link="https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits"
+    >
       <template #example>
         <ShowcaseExample>
           <pre>
@@ -24,26 +43,8 @@
         </ShowcaseExample>
       </template>
     </ShowcaseComponent>
-
   </div>
 </template>
-
-<script setup lang="ts">
-defineProps({
-  backgroundColor: {
-    type: String,
-    default: "#2c3e50",
-  },
-  borderColor: {
-    type: String,
-    default: "#42b983",
-  },
-  textColor: {
-    type: String,
-    default: "#fff",
-  },
-})
-</script>
 
 <style scoped lang="scss">
 .component-example {
