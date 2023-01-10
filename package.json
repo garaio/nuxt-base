@@ -9,7 +9,8 @@
     "postinstall": "nuxt prepare",
     "nodeVersionSwitcher": "nvs auto && nvs link && node --version",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "lint:debug": "eslint --debug --print-config 'eslint.debug.json' > .eslint.debug.json"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.1",
