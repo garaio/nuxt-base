@@ -2,9 +2,8 @@
 
 ## Prio cases
 
-* Documentation: prettier + eslint setup
-* axios ?
 * class components?
+* axios ?
 * Vuetify
 
 ## Backend changes needed

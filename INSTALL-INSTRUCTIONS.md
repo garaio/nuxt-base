@@ -2,7 +2,11 @@
 
 ## NODEJS: 18
 
-Best way to install is:
+* You might have node 18 globally installed - all fine ✅
+* You have an older version installed globally:  
+  If you have other projects which require an older version of node, you need to manually switch the versions:
+
+Possible way to install node 18 for this project is:
 
 * Install nvs (node version switcher)
   * If you have winget: (`winget install nvs`)
@@ -13,33 +17,5 @@ Best way to install is:
 
 ## PREPARE VS CODE / EXTENSIONS
 
-Make sure you enable and disable the extensions for this workspace according to the `.vscode/extensions.json` file!
-
-For tooling support in VSCode, its recommended from Vue.js that you use the **Volar takeover mode**.
-Unfortunately, we can not fully automate this within VSCode workspace (yet).
-Please **follow the following instructions** to correctly setup your VSCode workspace:
-
-### Volar takeover mode
-
-It is recommended to use the volar-takeover-mode, for best developer experience:
-
-* see [here](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode)
-
-Basically enable / disable the following vs code extensions:
-
-#### Enable
-
-* `vue.volar` (Vue 3 Language Features)
-
-#### Disable
-
-Please make sure you disable the following vs code extensions **for this workspace only** (you might need it still for other projects), if you enabled them globally
-
-* `vscode.typescript-language-features` (TypeScript and JavaScript Language Features)
-  * you will find when searching the extensions like this: "@builtin typescript-language-features"
-  * Disable it for this workspace only!
-
-In case you developed already on Vue 2 Projects, please disable **for this workspace only**
-
-* `octref.vetur` (Vetur: Vue tooling for Vue 2)
-* `vue.vscode-typescript-vue-plugin` TypeScript Vue Plugin
+* **Quick / short way**: Use our [Unwanted recommendations](https://marketplace.visualstudio.com/items?itemName=GARAIOAG.garaio-vscode-unwanted-recommendations)-extension, which will report you any unwanted extensions for the workspace.
+* **Longer / detailed way**: Follow the instructions in the [EXTENSIONS.md](EXTENSIONS.md) to correctly setup your VSCode workspace.
