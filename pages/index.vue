@@ -25,6 +25,7 @@ function emitTest() {
         Welcome to GARAIO Nuxt base!
       </h1>
       <div class="components">
+        <ExampleClassComponent :start="10" />
         <ExampleI18n />
         <ExampleProps />
         <ExampleUseStateCounter />
