@@ -2,9 +2,13 @@
 
 ## Prio cases
 
-* class components?
-* axios ?
+* class components
+  * basic ✅
+  * mixins ?!
 * Vuetify
+* axios ?
+* build changes
+* webpack -> vite
 
 ## Backend changes needed
 

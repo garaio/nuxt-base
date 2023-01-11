@@ -52,7 +52,14 @@ defineProps({
 
     <slot name="example">
       <ShowcaseExample>
-        Please define a example to show in your example component
+        Please define an example to show it in action, using the <b>&lt;ShowcaseExample&gt;</b> component.
+        <pre>
+          &lt;template #example&gt;
+            &lt;ShowcaseExample&gt;
+              ...
+            &lt;/ShowcaseExample&gt;
+          &lt;/template&gt;
+        </pre>
       </ShowcaseExample>
     </slot>
   </div>
