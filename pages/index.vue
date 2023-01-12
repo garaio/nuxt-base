@@ -26,6 +26,7 @@ function emitTest() {
       </h1>
       <div class="components">
         <ExampleVuetify />
+        <ExampleClassComponent :start="10" />
         <ExampleI18n />
         <ExampleProps />
         <ExampleUseStateCounter />
