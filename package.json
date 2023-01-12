@@ -3,12 +3,13 @@
   "scripts": {
     "start": "nuxt dev -o",
     "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "nuxt:dev": "nuxt dev",
+    "nuxt:generate": "nuxt generate",
+    "nuxt:preview": "nuxt preview",
+    "nuxi:analyze": "npx nuxi analyze",
     "nuxi:cleanup": "npx nuxi cleanup",
     "postinstall": "nuxt prepare",
-    "nodeVersionSwitcher": "nvs auto && nvs link && node --version",
+    "setup:nodeVersionSwitcher": "nvs auto && nvs link && node --version",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:debug": "eslint --debug --print-config 'eslint.debug.json' > .eslint.debug.json"
