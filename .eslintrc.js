@@ -1,9 +1,13 @@
 // Based on https://antfu.me/posts/why-not-prettier
 // https://github.com/antfu/eslint-config
+// Rules: eslint-plugin-vue: https://eslint.vuejs.org/rules/
 process.env.ESLINT_TSCONFIG = "tsconfig.json";
 
 module.exports = {
-  extends: "@antfu",
+  extends: [
+    "@antfu",
+    "plugin:vuetify/recommended",
+  ],
   rules: {
     // GARAIO RULES
     // TODO: we could make our own eslint settings extension to extend from
