@@ -1,8 +1,10 @@
 // plugins/vuetify.js
 import type { ThemeDefinition } from "vuetify";
 import { createVuetify } from "vuetify";
-import * as components from "vuetify/components";
-import * as directives from "vuetify/directives";
+
+// vite-plugin-vuetify should now automatic load and tree-shake vuetify
+// import * as components from "vuetify/components";
+// import * as directives from "vuetify/directives";
 
 import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
@@ -27,8 +29,8 @@ const myCustomLightTheme: ThemeDefinition = {
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
-    components,
-    directives,
+    // components,
+    // directives,
     theme: {
       defaultTheme: "myCustomLightTheme",
       themes: {
