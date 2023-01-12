@@ -6,6 +6,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "nuxi:cleanup": "npx nuxi cleanup",
     "postinstall": "nuxt prepare",
     "nodeVersionSwitcher": "nvs auto && nvs link && node --version",
     "lint": "eslint .",
