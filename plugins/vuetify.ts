@@ -37,6 +37,14 @@ export default defineNuxtPlugin((nuxtApp) => {
         myCustomLightTheme,
       },
     },
+    // Global configuration
+    defaults: {
+      global: {
+        ripple: false
+      },
+      // Per component configuration
+      // VSheet: { elevation: 4},
+    },
   });
 
   nuxtApp.vueApp.use(vuetify);
